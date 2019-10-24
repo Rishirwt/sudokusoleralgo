@@ -4,7 +4,7 @@ package com.company;
 
 
     public static void main(String[] args) {
-
+        // Board Creation
         int[][] grid = {{3, 0, 6, 5, 0, 8, 4, 0, 0},
                 {5, 2, 0, 0, 0, 0, 0, 0, 0},
                 {0, 8, 7, 0, 0, 0, 0, 3, 1},
@@ -23,7 +23,7 @@ package com.company;
 
 
     }
-
+    // Logic for sudoku solving
     private static boolean sudokusolved(int[][] grid) {
 
         if(allfilled(grid))
@@ -59,8 +59,8 @@ package com.company;
 
         return false;
     }
-
-
+    
+    // To check if it is safe
     private static boolean issafe(int[][] grid, int j, int z, int i) {
 
         for (int  k= 0; k < 9; k++) {
@@ -81,7 +81,7 @@ package com.company;
         }
         return true;
     }
-
+    // function to check if all places filled
     private static boolean allfilled(int[][] grid) {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -92,7 +92,7 @@ package com.company;
         return true;
 
     }
-
+    // Function to print sudoku
     private static void printgird(int[][] grid) {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
